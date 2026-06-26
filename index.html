@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="APEX - Elevate Your Stride with premium performance footwear.">
+    <title>APEX | Premium Performance Footwear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">APEX</div>
+        <ul class="nav-links">
+            <li><a href="#men" class="magnetic">Men</a></li>
+            <li><a href="#women" class="magnetic">Women</a></li>
+            <li><a href="#about" class="magnetic">About Us</a></li>
+        </ul>
+        <div class="cart-icon magnetic" id="cart-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="checkout-btn magnetic">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="" alt="Product" id="modal-image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Shoe Title</h2>
+                    <p class="modal-price" id="modal-price">$0.00</p>
+                    <p class="modal-desc" id="modal-desc">Description here.</p>
+                    <div class="size-selector">
+                        <h3>Select Size</h3>
+                        <div class="sizes">
+                            <button class="size-btn">7</button>
+                            <button class="size-btn">8</button>
+                            <button class="size-btn">9</button>
+                            <button class="size-btn">10</button>
+                            <button class="size-btn">11</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn btn-primary magnetic" id="modal-add-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title reveal-text">APEX: Elevate <br>Your Stride</h1>
+            <p class="hero-subtitle reveal-text delay-1">Engineered for the fearless. Designed for the future.</p>
+            <a href="#products" class="btn-primary magnetic reveal-text delay-2">Shop Drop 01</a>
+        </div>
+        <div class="hero-visual">
+            <div class="glow-orb"></div>
+            <img src="hero.png" alt="APEX Hero Shoe" class="floating-shoe">
+        </div>
+    </header>
+
+    <!-- Men's Collection -->
+    <section class="products" id="men">
+        <div class="section-header reveal-up">
+            <h2>Men's Collection</h2>
+            <p>Engineered for maximum velocity.</p>
+        </div>
+        <div class="product-grid">
+            <article class="product-card reveal-up" data-id="1" data-price="250" data-name="APEX Phantom (Men)" data-img="shoe1.png" data-desc="The APEX Phantom features a featherlight chassis and responsive volt-energy foam. Precision engineered for maximum velocity.">
+                <div class="card-inner">
+                    <div class="card-img-wrapper">
+                        <img src="shoe1.png" alt="APEX Phantom">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-name">APEX Phantom</h3>
+                        <span class="product-price">$250</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary explore-btn magnetic">Explore Details</button>
+                        <button class="btn-primary add-cart-btn magnetic">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card reveal-up" data-id="2" data-price="280" data-name="APEX Volt Runner (Men)" data-img="men_shoe1.png" data-desc="Harness raw power with the APEX Volt Runner. Carbon fiber plates infused with neon accents create an unstoppable stride.">
+                <div class="card-inner">
+                    <div class="card-img-wrapper">
+                        <img src="men_shoe1.png" alt="APEX Volt Runner">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-name">APEX Volt Runner</h3>
+                        <span class="product-price">$280</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary explore-btn magnetic">Explore Details</button>
+                        <button class="btn-primary add-cart-btn magnetic">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card reveal-up" data-id="3" data-price="320" data-name="APEX Stealth Y-3 (Men)" data-img="men_shoe2.png" data-desc="Minimalist approach. Maximalist output. The Stealth Y-3 redefines streetwear tech with deep matte finish and aerodynamic silhouette.">
+                <div class="card-inner">
+                    <div class="card-img-wrapper">
+                        <img src="men_shoe2.png" alt="APEX Stealth Y-3">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-name">APEX Stealth Y-3</h3>
+                        <span class="product-price">$320</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary explore-btn magnetic">Explore Details</button>
+                        <button class="btn-primary add-cart-btn magnetic">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Women's Collection -->
+    <section class="products" id="women">
+        <div class="section-header reveal-up">
+            <h2>Women's Collection</h2>
+            <p>Sleek design. Uncompromised performance.</p>
+        </div>
+        <div class="product-grid">
+            <article class="product-card reveal-up" data-id="4" data-price="210" data-name="APEX Aero White (Women)" data-img="shoe2.png" data-desc="Clean, sharp, and aggressively light. Aero White combines mesh breathability with rigid support structures for everyday dominance.">
+                <div class="card-inner">
+                    <div class="card-img-wrapper">
+                        <img src="shoe2.png" alt="APEX Aero White">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-name">APEX Aero White</h3>
+                        <span class="product-price">$210</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary explore-btn magnetic">Explore Details</button>
+                        <button class="btn-primary add-cart-btn magnetic">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card reveal-up" data-id="5" data-price="240" data-name="APEX Nova Strike (Women)" data-img="women_shoe1.png" data-desc="Propel yourself forward with the Nova Strike. Tailored for endurance with an explosive energy return system.">
+                <div class="card-inner">
+                    <div class="card-img-wrapper">
+                        <img src="women_shoe1.png" alt="APEX Nova Strike">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-name">APEX Nova Strike</h3>
+                        <span class="product-price">$240</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary explore-btn magnetic">Explore Details</button>
+                        <button class="btn-primary add-cart-btn magnetic">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card reveal-up" data-id="6" data-price="270" data-name="APEX Eclipse (Women)" data-img="women_shoe2.png" data-desc="Embrace the shadows. The Eclipse offers unmatched stability and a bold, stealthy aesthetic for the modern athlete.">
+                <div class="card-inner">
+                    <div class="card-img-wrapper">
+                        <img src="women_shoe2.png" alt="APEX Eclipse">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-name">APEX Eclipse</h3>
+                        <span class="product-price">$270</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-secondary explore-btn magnetic">Explore Details</button>
+                        <button class="btn-primary add-cart-btn magnetic">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="about-container reveal-up">
+            <div class="about-text">
+                <h2>The APEX Philosophy</h2>
+                <p>Born from a desire to merge extreme athletic performance with high-end streetwear aesthetics, APEX was forged in the lab and tested on the streets. We don't just design shoes; we engineer kinetic potential.</p>
+                <p>Every fiber, every foam density, and every carbon plate is meticulously crafted to elevate your stride. Welcome to the future of footwear.</p>
+                <br>
+                <a href="#men" class="btn-primary magnetic">Explore Gear</a>
+            </div>
+            <div class="about-visual">
+                <img src="about_bg.png" alt="APEX Lab" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content reveal-up">
+            <h2>APEX</h2>
+            <p>Pushing the boundaries of performance and aesthetics.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
